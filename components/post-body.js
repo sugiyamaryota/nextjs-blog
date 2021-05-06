@@ -1,11 +1,12 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import React from "react"
+import Markdown from "react-markdown"
 import markdownStyles from './markdown-styles.module.css'
 
-export default function PostBody({ content }) {
+export default function PostBody({ main }) {
   return (
     <div className="max-w-2xl mx-auto">
       <div className={markdownStyles['markdown']}>
-        {documentToReactComponents(content.json)}
+        <Markdown children={main} />
       </div>
     </div>
   )

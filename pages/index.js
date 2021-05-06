@@ -21,11 +21,9 @@ export default function Index({ preview, allPosts }) {
           {heroPost && (
             <HeroPost
               title={heroPost.title}
-              coverImage={heroPost.coverImage}
+              hero={heroPost.hero}
               date={heroPost.date}
-              author={heroPost.author}
               slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
